@@ -12,4 +12,17 @@ def exists_word(word, instance):
 
 
 def search_by_word(word, instance):
-    """Aqui irá sua implementação"""
+    return [
+        {
+            "palavra": word,
+            "arquivo": file["nome_do_arquivo"],
+            "ocorrencias": [
+                {"linha": i+1, "conteudo": line.strip()}
+                for i, line in enumerate(file["linhas_do_arquivo"])
+                if word.lower() in line.lower()
+            ]
+        }
+        for file in instance.queue
+        if any(word.lower() in line.lower() for line
+               in file["linhas_do_arquivo"])
+    ]
