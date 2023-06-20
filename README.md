@@ -24,7 +24,7 @@ Análise assintótica das principais operações.
 
 ## Requisitos
 
-<img src="">
+<img src="https://raw.githubusercontent.com/willianAD/Project-TING/main/image/Projeto%20TING.png">
 
 # Requisitos Obrigatórios
 
